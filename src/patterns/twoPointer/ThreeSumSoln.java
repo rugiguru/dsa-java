@@ -7,6 +7,8 @@ import java.util.List;
 
 public class ThreeSumSoln {
 
+    // Better solution is to reduce the o(n3) to O(n2) by using
+    // arr[k] = - (arr[i] + arr[j]) and a hashSet to look up for value
     public List<List<Integer>> threeSumBetter(int[] nums) {
 
         int n = nums.length;
@@ -36,6 +38,9 @@ public class ThreeSumSoln {
         return ans;
     }
 
+    // optimal solution is for optimizing the extra space
+    // we can sort and use 2 pointer approach where i will be constant
+    // we can move j and k based on value required
     public List<List<Integer>> threeSumOptimal(int[] nums) {
         Arrays.sort(nums);
         int n = nums.length;
